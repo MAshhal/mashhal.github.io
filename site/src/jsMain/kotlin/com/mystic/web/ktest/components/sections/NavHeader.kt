@@ -47,7 +47,7 @@ private fun NavLink(path: String, text: String) {
 @Composable
 private fun MenuItems() {
     NavLink("/", "Home")
-    NavLink("/about", "About")
+//    NavLink("/about", "About")
 }
 
 @Composable
@@ -100,9 +100,9 @@ enum class SideMenuState {
 @Composable
 fun NavHeader() {
     Row(NavHeaderStyle.toModifier(), verticalAlignment = Alignment.CenterVertically) {
-        Link("https://kobweb.varabyte.com") {
+        Link("https://media1.tenor.com/m/yXCmSgizPRgAAAAC/phut-hon-doraemon.gif") {
             // Block display overrides inline display of the <img> tag, so it calculates centering better
-            Image("/kobweb-logo.png", "Kobweb Logo", Modifier.height(2.cssRem).display(DisplayStyle.Block))
+            Image("/logo.png", "Logo", Modifier.height(4.cssRem).display(DisplayStyle.Block))
         }
 
         Spacer()

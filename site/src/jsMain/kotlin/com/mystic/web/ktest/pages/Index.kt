@@ -77,7 +77,7 @@ fun HomePage() {
                 Column(Modifier.gap(2.cssRem)) {
                     Div(HeadlineTextStyle.toAttrs()) {
                         SpanText(
-                            "Use this template as your starting point for ", Modifier.color(
+                            "I have no idea what am I supposed to do\n", Modifier.color(
                                 when (ColorMode.current) {
                                     ColorMode.LIGHT -> Colors.Black
                                     ColorMode.DARK -> Colors.White
@@ -85,7 +85,7 @@ fun HomePage() {
                             )
                         )
                         SpanText(
-                            "Kobweb",
+                            "This looks cool tho",
                             Modifier
                                 .color(sitePalette.brand.accent)
                                 // Use a shadow so this light-colored word is more visible in light mode
@@ -94,7 +94,7 @@ fun HomePage() {
                     }
 
                     Div(SubheadlineTextStyle.toAttrs()) {
-                        SpanText("You can read the ")
+                        SpanText("Here I'll add the link to ")
                         Link("/about", "About")
                         SpanText(" page for more information.")
                     }
@@ -105,8 +105,8 @@ fun HomePage() {
                         // here. Link to an order page? Open a calendar UI? Play a movie?
                         // Up to you!
                         ctx.router.tryRoutingTo("/about")
-                    }, colorPalette = ColorPalettes.Blue) {
-                        Text("This could be your CTA")
+                    }, colorPalette = ColorPalettes.Amber) {
+                        Text("Sup Arham!")
                     }
                 }
             }

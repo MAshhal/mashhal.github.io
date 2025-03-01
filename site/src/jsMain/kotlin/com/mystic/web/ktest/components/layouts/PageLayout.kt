@@ -65,7 +65,7 @@ private fun SvgCobweb(modifier: Modifier) {
 @Composable
 fun PageLayout(title: String, content: @Composable ColumnScope.() -> Unit) {
     LaunchedEffect(title) {
-        document.title = "Kobweb - $title"
+        document.title = "Test - $title"
     }
 
     Box(
@@ -81,7 +81,7 @@ fun PageLayout(title: String, content: @Composable ColumnScope.() -> Unit) {
             .gridTemplateRows { size(1.fr); size(minContent) },
         contentAlignment = Alignment.Center
     ) {
-        SvgCobweb(Modifier.gridRow(1).align(Alignment.TopStart))
+//        SvgCobweb(Modifier.gridRow(1).align(Alignment.TopStart))
         Column(
             // Isolate the content, because otherwise the absolute-positioned SVG above will render on top of it.
             // This is confusing but how browsers work. Read up on stacking contexts for more info.

@@ -20,6 +20,7 @@ import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.dom.Span
 import com.mystic.web.ktest.toSitePalette
+import org.jetbrains.compose.web.dom.Text
 
 val FooterStyle = CssStyle.base {
     Modifier
@@ -32,23 +33,37 @@ fun Footer(modifier: Modifier = Modifier) {
     Box(FooterStyle.toModifier().then(modifier), contentAlignment = Alignment.Center) {
         Span(Modifier.textAlign(TextAlign.Center).toAttrs()) {
             val sitePalette = ColorMode.current.toSitePalette()
-            SpanText("Built with ")
-            Link(
-                "https://github.com/varabyte/kobweb",
-                "Kobweb",
-                Modifier.setVariable(ColorVar, sitePalette.brand.primary),
-                variant = UncoloredLinkVariant
-            )
-            SpanText(", template designed by ")
-
-            // Huge thanks to UI Rocket (https://ui-rocket.com) for putting this great template design together for us!
-            // If you like what you see here and want help building your own site, consider checking out their services.
-            Link(
-                "https://ui-rocket.com",
-                "UI Rocket",
-                Modifier.setVariable(ColorVar, sitePalette.brand.accent).whiteSpace(WhiteSpace.NoWrap),
-                variant = UncoloredLinkVariant
-            )
+            Span {
+                Text("Made by ")
+                Link(
+                    path = "https://github.com/MAshhal",
+                    text = "Muhammad Ashhal"
+                )
+                Text(
+                    ", Using "
+                )
+                Link(
+                    "https://github.com/varabyte/kobweb",
+                    "Kobweb"
+                )
+            }
+//            SpanText("Built with ")
+//            Link(
+//                "https://github.com/varabyte/kobweb",
+//                "Kobweb",
+//                Modifier.setVariable(ColorVar, sitePalette.brand.primary),
+//                variant = UncoloredLinkVariant
+//            )
+//            SpanText(", template designed by ")
+//
+//            // Huge thanks to UI Rocket (https://ui-rocket.com) for putting this great template design together for us!
+//            // If you like what you see here and want help building your own site, consider checking out their services.
+//            Link(
+//                "https://ui-rocket.com",
+//                "UI Rocket",
+//                Modifier.setVariable(ColorVar, sitePalette.brand.accent).whiteSpace(WhiteSpace.NoWrap),
+//                variant = UncoloredLinkVariant
+//            )
         }
     }
 }
